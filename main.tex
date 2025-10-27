@@ -1,6 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
-% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project!
 % I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
 % Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
 % And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
@@ -10,7 +10,11 @@
 
 % Select document class scrbook to be in the two-page mode and accommodate for the binding of a printed book.
 % The bibliography receives an entry in the table of contents but no number.
-\documentclass[pagesize=auto,bibliography=totocnumbered]{scrbook}
+\documentclass[
+    pagesize=auto,
+    bibliography=totocnumbered,
+    cleardoublepage=empty
+    ]{scrbook}
 
 \input{setup.tex}
 \title{\mytitle}
@@ -21,18 +25,18 @@
 
 % Set up externalization to save all tikz pictures also as JPG files (for the ebook/HTML output).
 \ifxetex
-\else   
+\else
     \usetikzlibrary{external}
     \tikzexternalize
     % Modify the behavior of tikzpicture: convert the generated image PDF to a jpg and insert that jpg (instead of the PDF) into the document.
     \tikzset{jpg export/.style={external/system call={pdflatex \tikzexternalcheckshellescape -interaction=batchmode -jobname "\image" "\texsource"; convert -gravity center -extent 1245 -strip -quality 100 -density 300 -transparent white "\image.pdf" "\image.jpg"},/pgf/images/external info,/pgf/images/include external/.code=\includegraphics{##1.jpg}}}
-   
+
     % Activate "jpg export" configuration.
     \tikzset{jpg export}
 
     % Output the pdf to an existing directory.
-    \tikzsetexternalprefix{tikz-cache/} 
-    
+    \tikzsetexternalprefix{tikz-cache/}
+
 \fi
 
 %%%%%%%%%%%%%%%%%
@@ -76,12 +80,7 @@
 % Front matter chapter entries use Roman page numbering (i, ii, iii, iv, ...).
 \pagenumbering{roman}
 
-
-
-% Remove this line for your actual book. It is only for advertisement.
-\input{front/template-front}\blankpage
-
-\input{front/half-title}\blankpage
+\input{front/half-title}
 
 % The additional title with the cover is not needed for e-books.
 \ifxetex
@@ -89,14 +88,13 @@
 \fi
 
 \input{front/publisher}\newpage
-\input{front/dedication}\blankpage
-\input{front/epigraph}\blankpage
+\input{front/dedication}
+\input{front/epigraph}
 
-\input{front/tableofcontents.tex}\blankpage
+\input{front/tableofcontents.tex}
 
-
-\input{front/foreword}\blankpage
-\input{front/preface}\blankpage
+\input{front/foreword}
+\input{front/preface}
 
 \ifxetex
 % Headers and Footers
@@ -129,53 +127,50 @@
 \renewcommand*{\chapterpagestyle}{plain}
 \pagenumbering{arabic}
 
-
-
-    
 % Add additional chapters / remove chapters if necessary.
-\input{chapters/0-latex.tex}\newpage
-\input{chapters/01-advantages-latex.tex}\newpage
-\input{chapters/02-generate-first-ebook.tex}\newpage
-\input{chapters/03-filling-template.tex}\newpage
+% \input{chapters/0-latex.tex}\newpage
+% \input{chapters/01-advantages-latex.tex}\newpage
+% \input{chapters/02-generate-first-ebook.tex}\newpage
+% \input{chapters/03-filling-template.tex}\newpage
 
 %%%%%%%%%%%%%%%%%
 % Back matter
 %%%%%%%%%%%%%%%%%
 \backmatter
 
-\input{chapters/04-tikz-examples.tex}\newpage
+% \input{chapters/04-tikz-examples.tex}\newpage
 
-\input{back/advertisement}\blankpage
-\input{back/author}\blankpage
-\input{back/thebooksstory}\blankpage
-\input{back/questions}\blankpage
-\index{XeLaTeX@\textit{XeLaTeX}|textbf}
-\input{back/ideas}\blankpage
-\index{XeLaTeX@\textit{XeLaTeX}|textbf}
-\input{back/glossary}\blankpage
+% \input{back/advertisement}
+% \input{back/author}
+% \input{back/thebooksstory}
+% \input{back/questions}
+% \index{XeLaTeX@\textit{XeLaTeX}|textbf}
+% \input{back/ideas}
+% \index{XeLaTeX@\textit{XeLaTeX}|textbf}
+% \input{back/glossary}
 
 % This adds a separate quotations page (sources in the e-book are already included in the text body).
-\ifxetex
-    \input{back/quotations}\blankpage
-\fi
+% \ifxetex
+%     \input{back/quotations}
+% \fi
 
-\input{back/bibliography}\blankpage
+% \input{back/bibliography}
 
 %%%%%%%%%%%%%%%%%
 % Appendix
 %%%%%%%%%%%%%%%%%
-\appendix
+% \appendix
 
 % The index page exists only for printed PDFs.
 \ifxetex
     % This is an optional command to display a prologue before the index.
     % \indexprologue{Replace index prologue with an own introduction (errata, formatting, abbreviations, etc.).}
-    
-    \printindex\blankpage
+
+    \printindex
     \thispagestyle{empty}
 \fi
 
-\input{back/amazon}\blankpage
-\input{back/last}
+% \input{back/amazon}
+% \input{back/last}
 
 \end{document}

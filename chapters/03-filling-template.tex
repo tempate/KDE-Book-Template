@@ -1,6 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
-% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project!
 % I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
 % Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
 % And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
@@ -10,22 +10,25 @@
 % This is an excerpt from the accompanying book, Even Better Books with LaTeX the Agile Way in 2023. https://www.amazon.com/Better-Books-LaTeX-Agile-Book-ebook/dp/B0BMZJ5LF7
 %%%%%%%%%%%%%%%%%
 
-\chapter{Filling the Template}\label{fillingthetemplate:cha}
+\chapter{Filling the Template}
+\label{fillingthetemplate:cha}
 
 Now that you have experienced the steps of creating documents with the template, you can start to add content to them. In this section, we will go through each file of the template (\url{https://tinyurl.com/latextemplate2023}) and give you a ``to do'' list of items you can work on one by one\emdash{}from the title to the appendix.
 
-One way to understand the structure of a book is to imagine how books were created before the digital age.\index{book!structure} Imagine various groups of people working on the book and handing over the results to the next group. At the beginning of this process, there is the core material that makes up most of the book: the individual chapters and sections. Those are surrounded by the front and back matter, which consist of several layers. The author hands the text of the \textit{chapters} over to the editor\index{editor}, together with a note introducing the author's work (the \textit{preface})\index{preface}. The editor adds the \textit{table of contents}\index{table of contents}, the \textit{index}\index{index}, \textit{bibliography}\index{bibliography}, \textit{quotation sources}\index{quotation!sources}, and maybe an \textit{appendix}\index{appendix} (containing summaries from throughout the book), and hands the book over to the \textit{publisher}. 
+One way to understand the structure of a book is to imagine how books were created before the digital age.\index{book!structure} Imagine various groups of people working on the book and handing over the results to the next group. At the beginning of this process, there is the core material that makes up most of the book: the individual chapters and sections. Those are surrounded by the front and back matter, which consist of several layers. The author hands the text of the \textit{chapters} over to the editor\index{editor}, together with a note introducing the author's work (the \textit{preface})\index{preface}. The editor adds the \textit{table of contents}\index{table of contents}, the \textit{index}\index{index}, \textit{bibliography}\index{bibliography}, \textit{quotation sources}\index{quotation!sources}, and maybe an \textit{appendix}\index{appendix} (containing summaries from throughout the book), and hands the book over to the \textit{publisher}.
 
-The publisher\index{publisher} adds information to the book, too. That is, first the \textit{publisher} page itself with the year of publication, ISBN number, copyright note, and publisher name, and then a description of how the book was created and, for example, how the reader can contact the publisher with any questions (the \textit{foreword})\index{foreword}. All the parts are then put into an envelope (consisting of the \textit{series title}\index{series title} and \textit{half title}\index{half title}) and handed over to the cover designer. The cover designer\index{cover designer} creates the cover\index{cover} (front, back, and spine), packages it together with the book into another envelope (consisting of the \textit{title page}\index{title} including the cover picture), and hands it to the printer. 
+The publisher\index{publisher} adds information to the book, too. That is, first the \textit{publisher} page itself with the year of publication, ISBN number, copyright note, and publisher name, and then a description of how the book was created and, for example, how the reader can contact the publisher with any questions (the \textit{foreword})\index{foreword}. All the parts are then put into an envelope (consisting of the \textit{series title}\index{series title} and \textit{half title}\index{half title}) and handed over to the cover designer. The cover designer\index{cover designer} creates the cover\index{cover} (front, back, and spine), packages it together with the book into another envelope (consisting of the \textit{title page}\index{title} including the cover picture), and hands it to the printer.
 
-\section{Main Document /main.tex}\label{entrypoint:sec}
+\section{Main Document /main.tex}
+\label{entrypoint:sec}
 
-The main document of an Overleaf project is the file in which Overleaf starts processing your project. When looking to make major changes like adding, rearranging, or removing sections and chapters, this is also the place for you to look first. 
+The main document of an Overleaf project is the file in which Overleaf starts processing your project. When looking to make major changes like adding, rearranging, or removing sections and chapters, this is also the place for you to look first.
 
 By default, the main document of an Overleaf project is \textit{main.tex}. You can find this file on the left side in the project file overview.\index{/main.tex}. You can change the project's main document in Overleaf by clicking on ``Menu'' under ``Settings / Main document.''
 
 
-\section{Global Setup}\label{globalsetup:sec}
+\section{Global Setup}
+\label{globalsetup:sec}
 
 The first file included in \textit{main.tex} is \textit{setup.tex}. This file defines all the global parameters of your book\emdash{}for example, the book's dimensions, the book's author, and the book's title. In the left project window, scroll down until you see \textit{setup.tex}.\index{/setup.tex} Click on it and start editing the file:
 
@@ -41,7 +44,7 @@ The first file included in \textit{main.tex} is \textit{setup.tex}. This file de
 
 About the last two points, if you do not own a company, put in your own name and address and leave the URL empty. Note that from a legal standpoint, the exact requirements for providing the address depend on the country where you are publishing the book. Writing down all the information puts you on the safe side; if you want privacy, you must check what is required by law (and perhaps consider a P.O.~box). Alternatively, just contact us (mail@lode.de), and maybe we can publish your book, and you will not have to worry about any paperwork.
 
-We also need two cover versions,\index{cover!requirements} one for the e-book (JPG: low resolution, lossy compression) and one for print (PNG: high resolution, lossless compression). The reason is that (at least on platforms like Amazon) your profits for each e-book shrink depending on the file size. In 2023, this download charge for Amazon.com was around \${}.15 per MB, so a 10 MB e-book would reduce your profit per book by nearly \${}1.50 (check \url{https://kdp.amazon.com/en_US/help/topic/G200634500} for current prices depending on the country of publication). For print, the file size can be ignored, and thus, the image quality can and should be as high as possible.\index{cover!resolution}\index{e-book!resolution}\index{resolution} 
+We also need two cover versions,\index{cover!requirements} one for the e-book (JPG: low resolution, lossy compression) and one for print (PNG: high resolution, lossless compression). The reason is that (at least on platforms like Amazon) your profits for each e-book shrink depending on the file size. In 2023, this download charge for Amazon.com was around \${}.15 per MB, so a 10 MB e-book would reduce your profit per book by nearly \${}1.50 (check \url{https://kdp.amazon.com/en_US/help/topic/G200634500} for current prices depending on the country of publication). For print, the file size can be ignored, and thus, the image quality can and should be as high as possible.\index{cover!resolution}\index{e-book!resolution}\index{resolution}
 
 Rename both versions of your cover (PNG and JPG) \textit{cover.png} and \textit{cover.jpg} and upload them into the \textit{images} folder. If you want to use different filenames, simply upload your cover files and replace the file name entries in the \textit{setup.tex}\index{/setup.tex} and \textit{output.opf} file.
 
@@ -65,7 +68,7 @@ To set up the publisher information page:
 \begin{itemize}
 \item Replace ``Your email address'' with your email address;
 \item Replace ``First'' with the edition number;
-\item Replace the three ISBN numbers with your e-book's, softcover's, and hardcover's ISBN numbers; 
+\item Replace the three ISBN numbers with your e-book's, softcover's, and hardcover's ISBN numbers;
 \item Replace ``Your editor's name'' with your editor's name;
 \item Replace ``Your designer's name'' with your book cover designer's name;
 \item Replace ``Your image sources'' with your image and icon source (e.g., ``Shutterstock''), including its license type; and
@@ -96,11 +99,13 @@ If your book is part of a series, uncomment the ``\%\\seriestrue'' line by remov
 
 
 
-\section{File Structure}\label{filestructure:sec}
+\section{File Structure}
+\label{filestructure:sec}
 
 Now that we have filled in the global information, we can go file by file to replace the actual text blocks. In the accompanying book, (\textit{Even Better Books with LaTeX the Agile Way in 2023: Streamline Your Writing Process and Connect with Readers from Day One}, \url{https://amzn.to/3GCEGen}), I discuss adapting the \textit{structure} of the book, meaning in which sequence the chapters are placed in the book.
 
-\subsection{Front Matter}\label{frontmatter:sec}
+\subsection{Front Matter}
+\label{frontmatter:sec}
 
 In the left project window, click on the \textit{front} folder. You will see a list of several files open.
 
@@ -114,10 +119,10 @@ In the left project window, click on the \textit{front} folder. You will see a l
     \item Next is the \textbf{dedication}\index{dedication} page (see \textit{front/dedication.tex}\index{/front/dedication.tex}). Here, you can thank the people who helped you create the book. This page stresses that books build on other people's work. When writing it, think of it as a letter you would send to those people. Some people just write, ``To my husband/wife/parents.'' If you see it as but a chore and want to express your gratitude to those people in person rather than in writing, you can safely leave out the dedication page. In the accompanying book, (\textit{Even Better Books with LaTeX the Agile Way in 2023: Streamline Your Writing Process and Connect with Readers from Day One}, \url{https://amzn.to/3GCEGen}), I discuss how to rearrange, add, or remove entire pages or sections.
 
 
-    
+
     \item Another optional page is the \textbf{epigraph}\index{epigraph} page (see \textit{front/epigraph.tex}\index{/front/epigraph.tex}). This page sets the theme for the book. This can be a quote, a picture, or anything you think could fit here. Here you can be creative and put some emotion into your book, even if it might be a dry book about LaTeX and project management. In my book \citetitle{PFH1E}, I have used the epigraph to introduce the reader to the summary boxes\emdash{}insights into philosophy and linguistics\emdash{}that I have put at the end of every section. They tell a meta-story. They are the icing on the cake. For your epigraph, consider whether you want to add a particular plot or theme to your nonfiction book. The epigraph page is the perfect place to introduce this concept.
 
-    \item Next comes the \textbf{foreword} (see \textit{front/foreword.tex}\index{/front/foreword.tex}). This is written by the publisher or you, with your self-publisher hat on. It should focus less on the book's content and instead focus on the book's production process. Encourage the reader to give you feedback and advise how he or she can contact you with an issue with the book, such as an error. Alternatively, the foreword can be written by an expert in the field as a type of endorsement. 
+    \item Next comes the \textbf{foreword} (see \textit{front/foreword.tex}\index{/front/foreword.tex}). This is written by the publisher or you, with your self-publisher hat on. It should focus less on the book's content and instead focus on the book's production process. Encourage the reader to give you feedback and advise how he or she can contact you with an issue with the book, such as an error. Alternatively, the foreword can be written by an expert in the field as a type of endorsement.
 
     \item After the foreword, it is now up to you, the author, to introduce the book in the \textbf{preface} (see \textit{front/preface.tex}\index{/front/preface.tex}). This can include how you arrived at the decision to write it, a personal note to the readers, and an ``elevator pitch,''\index{elevator pitch} a short introduction telling the reader why this book is an essential read. Try to be personal and try to stay away from sales talk or corporate speech. Add a quote by your favorite author as a finishing touch. You have already entered the information about you, the author, and the book series (if applicable) in the \textit{setup.tex}, so you are done with this file, too.
 
@@ -126,7 +131,8 @@ In the left project window, click on the \textit{front} folder. You will see a l
 This concludes the front matter of the book. The remaining file, \textit{series-title.tex}, is discussed in the accompanying book, (\textit{Even Better Books with LaTeX the Agile Way in 2023: Streamline Your Writing Process and Connect with Readers from Day One}, \url{https://amzn.to/3GCEGen}).
 
 
-\newpage\section{Main Matter}\label{mainmatter:sec}
+\newpage\section{Main Matter}
+\label{mainmatter:sec}
 
 In the folder list in the project view on the left, you will see a folder named \textit{chapters}. This is the place for the main content, with a separate file for each chapter. Inside the \textit{chapters}\index{/chapters} folder, you will find \textit{0-latex.tex}\textit{0-latex.tex}, \textit{01-advantages-latex.tex}, \textit{02-generate-first-ebook.tex}, and \textit{03-filling-template.tex}. Those are just sample files showing excerpts of this book (the first three chapters of Part 2, including this chapter). You can delete the files after adding your own material.
 
@@ -157,7 +163,8 @@ Once you have identified all chapters and created the files, you need to copy th
 One way of starting each chapter file is by defining the chapter title and label, and adding a quotation to set the tone of the chapter. You can reuse the code for each new chapter file by copying and pasting the following code to the top of your files:
 
 \begin{lstlisting}
-\chapter{Replace with the Chapter Name}\label{chaptername:cha}
+\chapter{Replace with the Chapter Name}
+\label{chaptername:cha}
 
 \begin{myquotation} The perfect place for an introducing quotation.
 \mbox{}\hfill \emdash{}Famous Person\index{Person, Famous}
@@ -181,14 +188,15 @@ One way of starting each chapter file is by defining the chapter title and label
 There are several approaches to organizing your book's individual chapters and sections. Personally, I prefer to divide my content into small (ideally independent) slices, with each slice providing the reader with some benefit. The accompanying book, (\textit{Even Better Books with LaTeX the Agile Way in 2023: Streamline Your Writing Process and Connect with Readers from Day One}, \url{https://amzn.to/3GCEGen}) discusses the entire process from idea to publishing.
 
 
-\section{Back Matter}\label{backmatter:sec}
+\section{Back Matter}
+\label{backmatter:sec}
 
 The back matter\index{back matter} of a book typically consists of two elements: references and connecting with the author.
 
 \begin{itemize}
     \item  By ``references''\index{references} I mean the glossary\index{glossary}, questions to reflect on about the book's contents, a summary of the main points of the book, the index, a list of image and quotation sources, and the bibliography. Whether or not you want to include the glossary, the questions, and the summary of ideas depends on the book you are writing. The index is created automatically, but it will need some work within the text of the main matter of the book, which I discuss in the accompanying book, (\textit{Even Better Books with LaTeX the Agile Way in 2023: Streamline Your Writing Process and Connect with Readers from Day One}, \url{https://amzn.to/3GCEGen}). The same applies to the bibliography.
-    
-    \item By ``connecting with the author'' I mean the ``About the Author''\index{/back/author.tex} section, information about your (or your publisher's) other books, an optional section about how the book was created, and a polite reminder to your readers to leave a written review online. If you want to give the book a finishing touch, end with a short quote on the last page.\index{author page} 
+
+    \item By ``connecting with the author'' I mean the ``About the Author''\index{/back/author.tex} section, information about your (or your publisher's) other books, an optional section about how the book was created, and a polite reminder to your readers to leave a written review online. If you want to give the book a finishing touch, end with a short quote on the last page.\index{author page}
 \end{itemize}
 
 For the second part, let us go through the files of the template one by one.
@@ -222,7 +230,7 @@ The remaining files in the back matter are as follows (see the accompanying book
 
 \textit{What about the table of contents?}\index{table of contents} While it is generated automatically in both LaTeX and Word, updating it in LaTeX requires no additional work. As the project files are fully compiled after each change, you do not even need to manually refresh the table of contents. We still have to organize and format the text you have pasted into the book's main matter. Once that is done, your entire table of contents will show up in the output.
 
-That is it! Your book is finished and we can now move on to polishing. 
+That is it! Your book is finished and we can now move on to polishing.
 
 Chances are that a few issues have come up through the copying and writing process. \textit{That is normal!} Remember, LaTeX takes a little bit of time to learn. But once you know it, it flows like a natural language. All it takes is patience. If you hit a wall, you can create a new copy of the template and progress in smaller steps. Even better, use the backup and restore feature (see the accompanying book, \textit{Even Better Books with LaTeX the Agile Way in 2023: Streamline Your Writing Process and Connect with Readers from Day One}, \url{https://amzn.to/3GCEGen} for more details) using the top menu entry (\textbf{History}). Also, you can always contact us (mail@lode.de); we may have a quick fix for your problem. Alternatively, we could bring your book to the market together.
 
