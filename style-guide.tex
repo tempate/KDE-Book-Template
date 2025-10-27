@@ -1,6 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
-% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project!
 % I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
 % Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
 % And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
@@ -69,8 +69,8 @@
 
 \fi
 % Set the space between paragraphs and deactivate indentation for paragraphs.
-\setlength{\parskip}{1.4\baselineskip}
-\setlength{\parindent}{0pt}
+% \setlength{\parskip}{1.4\baselineskip}
+% \setlength{\parindent}{0pt}
 
 
 %-------------------------------------------
@@ -94,10 +94,10 @@
 % Lists
 %%%%%%%%%%%%%%%
 
-\setlist[itemize,1]{wide = 0pt,labelwidth = 0cm, label=\color{red}\ding{110}} 
+\setlist[itemize,1]{wide = 0pt,labelwidth = 0cm, label=\color{red}\ding{110}}
 
 % Use level 2 to denote a list within a list.
-\setlist[itemize,2]{wide=4pt,leftmargin=4pt, label=\color{red}\ding{121}} 
+\setlist[itemize,2]{wide=4pt,leftmargin=4pt, label=\color{red}\ding{121}}
 
 %\setlist[itemize,3]{label={}} %list within a list within a list
 %\setlist[itemize,4]{label={}} %list within a list within a list within a list
@@ -134,8 +134,8 @@
 \newcommand{\cutlargepic}[1]{\AddToHookNext{shipout/background}{\put (0in,-22.8em){\includegraphics[width=\paperwidth]{#1}}}~\vspace{17em}}
 
 \newcommand{\cutpic}[1]{\AddToHookNext{shipout/background}{\put (0in,-17.8em){\includegraphics[width=\paperwidth]{#1}}}~\vspace{14em}}
-   
-\newcommand{\cutbottompic}[1]{\AddToHookNext{shipout/background}{\put (0in,-\textheight){\includegraphics[width=\paperwidth]{#1}}}}    
+
+\newcommand{\cutbottompic}[1]{\AddToHookNext{shipout/background}{\put (0in,-\textheight){\includegraphics[width=\paperwidth]{#1}}}}
 \else
 
 % You cannot use background pictures in e-books, so just add them as normal pictures or hide them.
@@ -149,5 +149,3 @@
 % Use these commands to create custom symbols that can be used as part of the text.
 \newcommand{\vcenteredinclude}[1]{\begingroup\setbox0=\hbox{\includegraphics[width=0.1in]{#1}}\parbox{\wd0}{\box0}\endgroup}
 \newcommand{\squareIcon}{\vcenteredinclude{images/square.png}}
-
-
