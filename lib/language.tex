@@ -23,3 +23,7 @@
 \newcommand{\babelES}[1]{\ifnum\pdfstrcmp{\languagename}{spanish}=0 {#1}\fi}
 \newcommand{\babelDE}[1]{\ifnum\pdfstrcmp{\languagename}{ngerman}=0 {#1}\fi}
 \newcommand{\babelEN}[1]{\ifnum\pdfstrcmp{\languagename}{american}=0 {#1}\fi}
+
+\addto\captionsspanish{%
+  \renewcommand{\contentsname}{Índice}%
+}
