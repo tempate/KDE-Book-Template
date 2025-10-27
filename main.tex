@@ -13,8 +13,12 @@
 \documentclass[
     pagesize=auto,
     bibliography=totocnumbered,
-    cleardoublepage=empty
-    ]{scrbook}
+    cleardoublepage=empty,
+    paper=5in:8in,
+    DIV=calc,            % let KOMA compute a good type area
+    headings=small,      % smaller chapter/section defaults
+    numbers=noendperiod  % aesthetic preference
+]{scrbook}
 
 \input{setup.tex}
 \title{\mytitle}

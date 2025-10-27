@@ -24,7 +24,7 @@
 % See https://kdp.amazon.com/en_US/help/topic/GVBQ3CMEQW3W2VL6
 
 % Select the margin for 24 - 150 pages by default.
-\newcommand{\margininside}{2.1cm}
+\newcommand{\margininside}{1.5cm}
 
 %%%%%%%%%%%%%%%%%
 % Hardcover / Softcover Formats. Selecting one of these ensures that you can use the same PDF for hardcover and softcover books on Amazon.
@@ -66,5 +66,6 @@
     bottom=\marginbottom,
     includehead,
     includefoot,
-    headheight=0pt
+    headheight=0pt,
+    bindingoffset=6mm
 ]{geometry}
