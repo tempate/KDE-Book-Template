@@ -67,7 +67,6 @@
 %    \coverimage[scale=0.8]{OEBPS/cover.jpg}
 \fi
 
-
 \input{style-guide.tex}
 \pagestyle{empty}
 
@@ -81,13 +80,14 @@
 \pagenumbering{roman}
 
 \input{front/half-title}
+\cleardoublepage
 
 % The additional title with the cover is not needed for e-books.
 \ifxetex
     \input{front/title}\newpage
 \fi
 
-\input{front/publisher}\newpage
+\input{front/publisher}
 \input{front/dedication}
 \input{front/epigraph}
 
