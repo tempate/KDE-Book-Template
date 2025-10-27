@@ -12,12 +12,9 @@
 
 % If your book includes images that extend beyond the usual margins, set bleed to 0.125in and activate the corresponding option in Amazon KDP.
 
-\newcommand{\bleed}{0in}
-%\newcommand{\bleed}{0.125in}
-
-\newcommand{\margintop}{0.3in}
-\newcommand{\marginbottom}{0.3in}
-\newcommand{\marginoutside}{0.3in}
+\newcommand{\margintop}{1.65cm}
+\newcommand{\marginbottom}{2.0cm}
+\newcommand{\marginoutside}{1.5cm}
 
 %%%%%%%%%%%%%%%%%
 % The inner margins depend on the number of pages of your book.
@@ -27,27 +24,15 @@
 % See https://kdp.amazon.com/en_US/help/topic/GVBQ3CMEQW3W2VL6
 
 % Select the margin for 24 - 150 pages by default.
-\newcommand{\margininside}{0.425in}
-% 151 - 300 pages
-%\newcommand{\margininside}{0.55in}
-% 301 - 500 pages
-%\newcommand{\margininside}{0.675in}
-% 501 - 700 pages
-%\newcommand{\margininside}{0.8in}
-% 701 - 828 pages
-%\newcommand{\margininside}{0.925in}
-
+\newcommand{\margininside}{2.1cm}
 
 %%%%%%%%%%%%%%%%%
 % Hardcover / Softcover Formats. Selecting one of these ensures that you can use the same PDF for hardcover and softcover books on Amazon.
 %%%%%%%%%%%%%%%%%
 
 % Select 5x8 by default.
-\newcommand{\bookwidth}{5in}\newcommand{\bookheight}{8in}
-%\newcommand{\bookwidth}{5.5in}\newcommand{\bookheight}{8.5in}
-% \newcommand{\bookwidth}{6in}\newcommand{\bookheight}{9in}
-%\newcommand{\bookwidth}{6.14in}\newcommand{\bookheight}{9.21in}
-%\newcommand{\bookwidth}{7in}\newcommand{\bookheight}{10in}
+\newcommand{\bookwidth}{5in}
+\newcommand{\bookheight}{8in}
 
 %%%%%%%%%%%%%%%%%
 % Hardcover-only formats. Selecting one of these requires you to create a separate PDF for a softcover version.
@@ -72,4 +57,14 @@
 % And now we are putting everything together to set the dimensions of the book.
 %%%%%%%%%%%%%%%%%
 
-\usepackage[paperwidth=\dimexpr\bookwidth+\bleed\relax, paperheight=\dimexpr\bookheight+\bleed+\bleed\relax, inner=\margininside, outer=\dimexpr\marginoutside+\bleed\relax, top=\dimexpr\margintop+\bleed\relax, bottom=\dimexpr\marginbottom+\bleed\relax,includehead, includefoot, headheight=32pt]{geometry}
+\usepackage[
+    paperwidth=\bookwidth,
+    paperheight=\bookheight,
+    inner=\margininside,
+    outer=\marginoutside,
+    top=\margintop,
+    bottom=\marginbottom,
+    includehead,
+    includefoot,
+    headheight=0pt
+]{geometry}
