@@ -1,6 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
-% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project!
 % I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
 % Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
 % And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
@@ -14,7 +14,7 @@
 \fi
 
 % Use this shorter command for textemdash.
-\newcommand{\emdash}[1][]{\textemdash}    
+\newcommand{\emdash}[1][]{\textemdash}
 
 % Set bibliography to footnote size.
 \renewcommand{\bibfont}{\footnotesize}
@@ -40,10 +40,10 @@
 
 % Set the font size of the index to very small.
     \usepackage{imakeidx}
-    \indexsetup{othercode=\footnotesize}    
+    \indexsetup{othercode=\footnotesize}
 
 % Use this command if you prefer more spaces between words rather than more hyphenations at the end of a line.
-    \sloppy    
+    \sloppy
 
 % To slightly tweak font spacing for aesthetics, use these commands.
     \usepackage{microtype}
@@ -53,4 +53,7 @@
     \usepackage{libertine}
 \fi
 
-
+% Required packages to avoid warnings when switching to setting the language to Spanish
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[scale=0.9]{tgheros}

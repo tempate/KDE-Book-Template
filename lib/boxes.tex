@@ -1,6 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
-% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project!
 % I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
 % Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
 % And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
@@ -9,39 +9,39 @@
 % Replace the "Did you know?", "Read more in...", box titles, and icons if necessary.
 
 % Configuring the commands for the PDF output...
-\ifx\HCode\undefined 
+\ifx\HCode\undefined
 
     % If you want to add a picture to the top right corner of a box, uncomment the line and upload the picture.
 
     \usepackage[many]{tcolorbox}
-    
-    \newtcolorbox{problem}[1][]{colframe = black!30,colback  = black!4,coltitle = black!20!black,title=\babelDE{\textbf{Frage}}\babelEN{\textbf{Question}}
+
+    \newtcolorbox{problem}[1][]{colframe = black!30,colback  = black!4,coltitle = black!20!black,title=\babelES{\textbf{Frage}}\babelEN{\textbf{Question}}
     %\hfill\smash{\raisebox{-11pt}{\includegraphics[height=1cm]{images/speech-bubble-cloud-with-question-mark.png}}}
     , #1,}
-    
-    \newtcolorbox{idea}[1][]{colframe = black!30,colback  = black!5,coltitle = black!30!black,title=\babelDE{\textbf{Idee}}\babelEN{\textbf{Idea}}
+
+    \newtcolorbox{idea}[1][]{colframe = black!30,colback  = black!5,coltitle = black!30!black,title=\babelES{\textbf{Idee}}\babelEN{\textbf{Idea}}
     %\hfill\smash{\raisebox{-11pt}{\includegraphics[height=1cm]{images/lightbulb-idea}}}
     , #1,}
 
-    \newtcolorbox{example}[1][]{colframe = black!20,colback  = black!0,coltitle = black!20!black,title=\babelDE{\textbf{Beispiel}}\babelEN{\textbf{Example}}
+    \newtcolorbox{example}[1][]{colframe = black!20,colback  = black!0,coltitle = black!20!black,title=\babelES{\textbf{Beispiel}}\babelEN{\textbf{Example}}
     %\hfill\smash{\raisebox{-11pt}{\includegraphics[height=1cm]{images/book-and-test-tube-with-supporter}}}
     , #1,}
 
-    
-    \newtcolorbox{biography}[2][]{colframe = black!30,colback  = black!5,coltitle = black!30!black,title=\babelDE{Biographie -- }\babelEN{Biography---}\textbf{#2}
+
+    \newtcolorbox{biography}[2][]{colframe = black!30,colback  = black!5,coltitle = black!30!black,title=\babelES{Biographie -- }\babelEN{Biography---}\textbf{#2}
     %\hfill\smash{\raisebox{-11pt}{\includegraphics[height=1cm]{images/identity-card}}}
     , #1,}
-    
+
 % ... and for the HTML output.
 \else
-	
+
     \newenvironment{problem}[1][]{\bfseries\HCode{<b>}}{\HCode{</b>}\par}
-    
+
     \newenvironment{idea}[1][]{\bfseries\HCode{<b>}}{\HCode{</b>}\par}
-	
-    \newenvironment{example}[1][]{\hrule\par \textbf{\babelDE{Beispiel}\babelEN{Example}}\par}{\hrule\par}
-    
-    \newenvironment{biography}[2][]{\hrule\par\textbf{\babelDE{Biographie}\babelEN{Biography}} \emdash \textbf{#2}\par}{\hrule\par}
+
+    \newenvironment{example}[1][]{\hrule\par \textbf{\babelES{Beispiel}\babelEN{Example}}\par}{\hrule\par}
+
+    \newenvironment{biography}[2][]{\hrule\par\textbf{\babelES{Biographie}\babelEN{Biography}} \emdash \textbf{#2}\par}{\hrule\par}
 
 \fi
 
@@ -53,7 +53,7 @@
 
 
 
-\ifx\HCode\undefined 
+\ifx\HCode\undefined
 
 % This code loads the \leftbar command for the definition environment.
     \usepackage{framed}
@@ -71,6 +71,5 @@
     \newenvironment{myquotation}
     {\begin{quotation}}{\end{quotation}}
 
-    
-\fi
 
+\fi

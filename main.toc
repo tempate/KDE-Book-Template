@@ -1,6 +1,6 @@
-\babel@toc {american}{}\relax 
-\contentsline {chapter}{\nonumberline Dedication}{v}{}%
-\contentsline {chapter}{\nonumberline Introduction}{vii}{}%
-\contentsline {chapter}{\nonumberline Foreword}{xi}{}%
-\contentsline {chapter}{\nonumberline Preface}{xiii}{}%
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\nonumberline Dedication}{\es@scroman {v}}{}%
+\contentsline {chapter}{\nonumberline Introduction}{\es@scroman {vii}}{}%
+\contentsline {chapter}{\nonumberline Foreword}{\es@scroman {xi}}{}%
+\contentsline {chapter}{\nonumberline Preface}{\es@scroman {xiii}}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
