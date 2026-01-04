@@ -1,85 +1,44 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
-% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project!
-% I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
-% Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
-% And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fonts.tex
+\usepackage{iftex}
 
-
-% Set font size of captions to small.
-\ifxetex
-    \usepackage[labelfont=bf]{caption}
-    \captionsetup{font=small}
-\fi
-
-% Use this shorter command for textemdash.
+% ----- Common stuff (engine-agnostic) -----
+% url setup etc. can stay as-is
 \newcommand{\emdash}[1][]{\textemdash}
-
-% Set bibliography to footnote size.
 \renewcommand{\bibfont}{\footnotesize}
-% You can use ``same'' (same font as your document's), ``sf'', ``tt''  or ``rm'' for monospaced font. Also see https://www.ctan.org/pkg/url
 \usepackage{url}
 \urlstyle{same}
 
-%-------------------------------------------
-% Create hyperlinks within PDF files but do not mark them as links.
-\ifxetex
-    \usepackage{hyperref}[2011/02/05]
-    \hypersetup{hidelinks}
+% Hyperref should load regardless of engine
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+% Microtype is fine with LuaLaTeX
+\usepackage{microtype}
+
+% ===== Engine-specific font setup =====
+\ifPDFTeX
+  % -------- pdfLaTeX path --------
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+  \usepackage[scale=0.9]{tgheros}
+  \usepackage{inconsolata}
+\else
+  % -------- XeLaTeX/LuaLaTeX path --------
+  \usepackage{fontspec}
+  \setmainfont{Libertinus Serif}
+  \setsansfont{TeX Gyre Heros}
+  \setmonofont{Latin Modern Mono}
 \fi
 
-% The following commands improve the font face for the PDF output (font tweaks are not available for e-books).
-\ifxetex
-% Prevent splitting footnotes over several pages. See https://texfaq.org/FAQ-splitfoot
-    \interfootnotelinepenalty=10000
+\linespread{1.1}   % slightly more space for comfortable reading
 
-% Set the footnote font size to very small.
-    % (Use a readable 9/11 pt instead of \scriptsize)
-    \renewcommand{\footnotesize}{\fontsize{9}{11}\selectfont}
-
-% Set the font size of the index to very small.
-    \usepackage{imakeidx}
-    \indexsetup{othercode=\footnotesize}
-
-% Use this command if you prefer more spaces between words rather than more hyphenations at the end of a line.
-    \sloppy
-
-% To slightly tweak font spacing for aesthetics, use these commands.
-    \usepackage{microtype}
-
-% ===== XeLaTeX fonts (book-standard trio) =====
-    \usepackage{fontspec}
-    \setmainfont{Libertinus Serif}   % Fallback: Linux Libertine O
-    \setsansfont{TeX Gyre Heros}     % Sans for heads/running elements
-    \setmonofont{Inconsolata}        % Mono for code
-\fi
-
-% Required packages to avoid warnings when switching to setting the language to Spanish
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[scale=0.9]{tgheros}
-\usepackage{inconsolata} % monospaced fallback for pdfLaTeX
-
-% =========================
-% KOMA-Script font settings
-% (scrbook/scrreprt/scrartcl). No titlesec.
-% =========================
-
-% Headings hierarchy suited to a 5x8" book:
-% Chapter ~ \Large (~17–18pt), Section ~ \large (~12pt),
-% Subsection/Subsubsection ~ \normalsize with weight/shape for contrast.
-\setkomafont{chapter}{\sffamily\bfseries\Large}
-\setkomafont{section}{\sffamily\bfseries\large}
-\setkomafont{subsection}{\sffamily\bfseries\normalsize}
-\setkomafont{subsubsection}{\sffamily\itshape\normalsize}
-
-% Captions: small text, bold label (compatible with caption package if loaded).
+% KOMA-Script font styling (unchanged)
+\setkomafont{disposition}{\rmfamily\bfseries}
+\addtokomafont{chapter}{\LARGE\scshape}
+\setkomafont{section}{\large}
+\setkomafont{subsection}{\normalsize}
+\setkomafont{subsubsection}{\itshape\normalsize}
 \setkomafont{caption}{\small}
-\setkomafont{captionlabel}{\bfseries}
-
-% Running heads / page numbers (optional, subtle sans):
-\setkomafont{pagehead}{\sffamily\small}
-\setkomafont{pagenumber}{\sffamily\small}
-
-% Lists, footnotes, etc., inherit body font; footnote size set above.
+\setkomafont{pagehead}{\small}
+\setkomafont{pagenumber}{\small}
