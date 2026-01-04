@@ -23,11 +23,11 @@
 \fi
 
 % Load the corresponding bibliography files.
-\ifxetex
-	\babelEN{\addbibresource{chapters/bibliography/english.bib}}
-\else
-    \babelEN{\bibinput{chapters/bibliography/english}}
-\fi
+% \ifxetex
+% 	\babelEN{\addbibresource{chapters/bibliography/english.bib}}
+% \else
+%     \babelEN{\bibinput{chapters/bibliography/english}}
+% \fi
 
 
 % Add a command to allow a preface for the bibliography (optional).
@@ -36,7 +36,7 @@
 
 
 % Use csquotes to correctly typeset quoted text according to the selected language.
-\usepackage{csquotes}
+\usepackage[autostyle]{csquotes}
 
 
 % Write the name of a referenced section or chapter label with \nameref{label}.
